@@ -58,20 +58,20 @@
             - team_name (varchar(15)).
         2. This table is predefined and is used to fetch team_id based on the the team_name of the players.
         3. Records in the team table :
-                +---------+--------------+
-                | team_id | team_name    |
-                +---------+--------------+
-                | AFG     | Afghanistan  |
-                | AUS     | Australia    |
-                | BAN     | Bangladesh   |
-                | ENG     | England      |
-                | IND     | India        |
-                | NED     | Netherlands  |
-                | NZ      | New Zeland   |
-                | PAK     | Pakistan     |
-                | SA      | South Africa |
-                | SL      | Sri Lanka    |
-                +---------+--------------+
+            - +------------------------+
+            - | team_id | team_name    |
+            - +------------------------+
+            - | AFG     | Afghanistan  |
+            - | AUS     | Australia    |
+            - | BAN     | Bangladesh   |
+            - | ENG     | England      |
+            - | IND     | India        |
+            - | NED     | Netherlands  |
+            - | NZ      | New Zeland   |
+            - | PAK     | Pakistan     |
+            - | SA      | South Africa |
+            - | SL      | Sri Lanka    |
+            - +------------------------+
 
 ## Working : 
 
