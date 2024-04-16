@@ -1,0 +1,95 @@
+body{
+    background: url("assets/index-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.body-sec{
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.body-sec h1{
+    color: antiquewhite;
+    font-weight: 800;
+    font-size: 37px;
+}
+.body-sec button{
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#loginOptions{
+    display: flex;
+    justify-content: space-evenly;
+}
+#loginOptions > button{
+    width : 120px;
+    height: 40px;
+}
+
+#loginForms{
+    margin-left: 50%;
+    transform: translate(-50%,0%);
+}
+
+#loginForms > form > label,input{
+    margin: 2px;
+    padding: 2px;
+    font-size: 15px;
+    padding-top: 2px;
+    font-weight: 550;
+    background-color: rgba(0,0,0,0);
+}
+
+#loginForms label {
+    color: antiquewhite;
+}
+
+#loginForms input{
+    width: 250px;
+    height: 20px;
+    color:rgba(242, 242, 242, 0.805);
+    margin-bottom: 10px;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 5px;
+}
+
+#loginForms > form > button{
+    margin: 10px;
+    padding: 5px;
+    margin-left: 50%;
+    transform: translate(-50%,0%);
+    width: 100px;
+    border-radius: 5px;
+    
+}
+
+#loginForms input:hover{
+    box-shadow: 5px 5px 15px 2px rgba(42, 117, 50, 0.8);
+}
+
+body button:hover{
+    background-color:rgba(168, 254, 81, 0.843);
+    color: black;
+    font-size: 14px;
+    border: none;
+}
+
+body button:active{
+    background-color: rgb(215, 95, 95);
+    color : whitesmoke;
+    font-size: 14px;
+}

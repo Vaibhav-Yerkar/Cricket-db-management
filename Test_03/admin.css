@@ -1,0 +1,165 @@
+body{
+    width: 98vw;
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bodyContentDiv{
+  background-color: rgb(232, 232, 232);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.54) inset;
+}
+
+.bodyDiv{
+    height: 80vh;
+    background-image: url('assets/section-bg.jpg');
+    color: white;
+}
+  
+.bodyDiv h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+  .navbar{
+    position: absolute;
+    left:50%;
+    top:70%;
+    transform: translate(-50%,-20%);
+  }
+
+  #navMenu{
+    width: 96vw;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navItem{
+    color: white;
+  }
+
+  .navItem h4{
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-weight: 550;
+    transition: 1000ms all;
+  }
+
+  .navbar h4:hover{
+    color: rgb(144, 229, 144);
+  }
+
+
+.container button{
+  margin-left: 50vw;
+  margin-bottom: 30px;
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: aliceblue;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.buttonContainer > button{
+  margin-left: 0px;
+  margin-right: 50px;
+}
+
+#deleteBtn:hover{
+  background-color: rgb(213, 99, 99);
+  color:white;
+}
+
+#deleteBtn:active{
+  background-color: rgb(91, 91, 91);
+  color:white;
+}
+
+.container button:hover{
+  background-color: rgb(93, 206, 93);
+}
+
+.container button:active{
+  background-color: rgb(213, 99, 99);
+  color:white;
+}
+
+.formContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 80px 0 80px 0;
+}
+  .formSection label,.formSection input, .formSection select {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .formSection input,.formSection select{
+    border-radius: 7px;
+    border: 1px solid black;
+    color: rgb(66, 64, 64);
+  }
+
+#oldDataDiv{
+  padding-top: 40px;
+  margin-left: 50px;
+}
+
+#oldDataDiv label, #oldDataDiv input, #oldDataDiv select{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  #oldDataDiv input,#oldDataDiv select{
+    border-radius: 7px;
+    border: 1px solid black;
+    color: rgb(66, 64, 64);
+    width: 200px;
+    height: 25px;
+  }
+
+footer{
+    padding-top: 19px;
+    height: 10vh;
+    background-color: rgb(210, 210, 210);
+    font-size: 17px;
+}
+  footer .link{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-10%,0%);
+    text-decoration: none;
+    color: rgb(132, 131, 131);
+  }
+  footer .link:hover{
+    color: black;
+  }
+  footer .link:active{
+    color:rgb(125, 98, 222);
+  }
+
+  footer .footerMarquee{
+    margin-top: 25px;
+  }

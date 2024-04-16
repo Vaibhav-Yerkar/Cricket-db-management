@@ -1,0 +1,208 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css ">
+    <title>Admin Page</title>
+</head>
+<body>
+    <div class="bodyDiv">
+        <h1>Admin Page</h1>
+        <div class="navbar">
+            <ul id="navMenu">
+                <li class="navItem" id="addDataLink" style="color : rgb(76,250,76); border-bottom : 4px solid rgb(76,250,76);">
+                    <h4 href="#addData" onclick="sectionActivation('addData')">Add Data</h4>
+                </li>
+                <li class="navItem" id="modifyDataLink">
+                    <h4 href="#modifyData" onclick="sectionActivation('modifyData')">Modify Data</h4>
+                </li>
+                <li class="navItem" id="viewUserLink">
+                    <h4 href="#viewUser" onclick="sectionActivation('viewUser')">View User</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <div class="bodyContentDiv">
+        <div class="container" id="addData">    
+            <form id="addDataForm" class="formContainer">
+                <div id="addDataFormSection" class="formSection">
+                    <label for="playerName">Player Name:</label>
+                    <input type="text" id="playerName" required><br>
+            
+                    <label for="playerJersey">Player Jersey Number:</label>
+                    <input type="text" id="playerJersey" required><br>
+            
+                    <label for="teamId">Team Name:</label>
+                    <select id="teamId">
+                        <option value="IND">India</option>
+                        <option value="AFG">Afghanistan</option> 
+                        <option value="NZ">New Zeland</option>
+                        <option value="ENG">England</option>
+                        <option value="BAN">Bangladesh</option>
+                        <option value="PAK">Pakistan</option>
+                        <option value="SL">Sri Lanka</option>
+                        <option value="SA">South Africa</option>
+                        <option value="AUS">Australia</option>
+                        <option value="NED">Netherland</option>
+                    </select><br>
+            
+                    <label for="role">Player Role :</label>
+                    <select id="role">
+                        <option value="batsman">Bats Man</option>
+                        <option value="bowler">Bowler</option>
+                        <option value="all-rounder">All Rounder</option>
+                    </select><br>
+                    
+                    <label for="teamPosition">team Position:</label>
+                    <select id="teamPosition">
+                        <option value="playing-11">Playing 11</option>
+                        <option value="Extra">Substitute/Extra</option>
+                    </select><br>
+            
+                    <label for="battingPosition">Batting Position :</label>
+                    <select id="battingPosition">
+                        <option value="top-order">Top-Order</option>
+                        <option value="middle-order">Middle-Order</option>
+                        <option value="tail-ender">Tail-Ender</option>
+                    </select><br>
+                </div>
+                <div id="addDataFormSection" class="formSection">
+                    <label for="totalRuns">Total Runs Made:</label>
+                    <input type="text" id="totalRuns" required value="0"><br>
+            
+                    <label for="totalWickets">Total Wickets Taken:</label>
+                    <input type="text" id="totalWickets" required value="0"><br>
+            
+                    <label for="strikeRate">Strike Rate:</label>
+                    <input type="text" id="strikeRate" required value="0"><br>
+            
+                    <label for="centuries">Number of Centuries:</label>
+                    <input type="text" id="centuries" required value="0"><br>
+            
+                    <label for="mostRunsInAMatch">Most Runs in a Match:</label>
+                    <input type="text" id="mostRunsInAMatch" required value="0"><br>
+            
+                    <label for="mostWicketsInAMatch">Most Wickets in a Match:</label>
+                    <input type="text" id="mostWicketsInAMatch" required value="0"><br>
+                </div>
+    
+            </form>
+            <button type="button" onclick="addData()">Add Data</button>
+        </div>
+        
+        <!-- ----------------------------------------------------------------------- -->
+        <div class="container" id="modifyData" style="display: none;">
+            <center style="padding-top: 5px;">
+                <p>!! To Delete Data, Enter Player's Information as in Old Player's Information  and click Delete Data !!
+            </center>
+            <div id="oldDataDiv">
+                <label for="oldPlayerName">Player's Old Name:</label>
+                <input type="text" id="oldPlayerName" required>
+                
+                <label for="oldPlayerJersey">Player's Old Jersey Number:</label>
+                <input type="text" id="oldPlayerJersey" required>
+                
+                <label for="oldTeamId">Old Team Name:</label>
+                <select id="oldTeamId">
+                    <option value="IND">India</option>
+                    <option value="AFG">Afghanistan</option> 
+                    <option value="NZ">New Zeland</option>
+                    <option value="ENG">England</option>
+                    <option value="BAN">Bangladesh</option>
+                    <option value="PAK">Pakistan</option>
+                    <option value="SL">Sri Lanka</option>
+                    <option value="SA">South Africa</option>
+                    <option value="AUS">Australia</option>
+                    <option value="NED">Netherland</option>
+                </select><br>
+            </div>
+            <form id="modifyDataForm" class="formContainer">
+                <h3>New Information : </h3>
+                <div id="modifyDataFormSection" class="formSection">
+                    <label for="mod-playerName">Player Name:</label>
+                    <input type="text" id="mod-playerName" required><br>
+                    
+                    <label for="mod-playerJersey">Player Jersey Number:</label>
+                    <input type="text" id="mod-playerJersey" required><br>
+                    
+                    <label for="mod-teamId">Team Name:</label>
+                    <select id="mod-teamId">
+                        <option value="IND">India</option>
+                        <option value="AFG">Afghanistan</option> 
+                        <option value="NZ">New Zeland</option>
+                        <option value="ENG">England</option>
+                        <option value="BAN">Bangladesh</option>
+                        <option value="PAK">Pakistan</option>
+                        <option value="SL">Sri Lanka</option>
+                        <option value="SA">South Africa</option>
+                        <option value="AUS">Australia</option>
+                        <option value="NED">Netherland</option>
+                    </select><br>
+                    
+                    <label for="mod-role">Player Role :</label>
+                    <select id="mod-role">
+                        <option value="batsman">Bats Man</option>
+                        <option value="bowler">Bowler</option>
+                        <option value="all-rounder">All Rounder</option>
+                    </select><br>
+                    
+                    <label for="mod-teamPosition">team Position:</label>
+                    <select id="mod-teamPosition">
+                        <option value="playing-11">Playing 11</option>
+                        <option value="Extra">Substitute/Extra</option>
+                    </select><br>
+                    
+                    <label for="mod-battingPosition">Batting Position :</label>
+                    <select id="mod-battingPosition">
+                        <option value="top-order">Top-Order</option>
+                        <option value="middle-order">Middle-Order</option>
+                        <option value="tail-ender">Tail-Ender</option>
+                    </select><br>
+                </div>
+                <div id="modifyDataFormSection" class="formSection">
+                    <label for="mod-totalRuns">Total Runs Made:</label>
+                    <input type="text" id="mod-totalRuns" required value="0"><br>
+                    
+                    <label for="mod-totalWickets">Total Wickets Taken:</label>
+                    <input type="text" id="mod-totalWickets" required value="0"><br>
+                    
+                    <label for="mod-strikeRate">Strike Rate:</label>
+                    <input type="text" id="mod-strikeRate" required value="0"><br>
+                    
+                    <label for="mod-centuries">Number of Centuries:</label>
+                    <input type="text" id="mod-centuries" required value="0"><br>
+                    
+                    <label for="mod-mostRunsInAMatch">Most Runs in a Match:</label>
+                    <input type="text" id="mod-mostRunsInAMatch" required value="0"><br>
+                    
+                    <label for="mod-mostWicketsInAMatch">Most Wickets in a Match:</label>
+                    <input type="text" id="mod-mostWicketsInAMatch" required value="0"><br>
+                </div>
+                
+            </form>
+            <div class="buttonContainer">
+                <button type="button" onclick="modifyData()">Save Changes</button>
+                <button type="button" onclick="deleteData()" id="deleteBtn">Delete Data</button>
+            </div>
+        </div>
+    
+        <!-- ------------------------------------------------------------------------- -->
+        <div class="container" id="viewUser" style="display: none;">
+            
+        </div>
+        <script src="admin.js"></script>
+    </div>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <footer>
+        <a href="index.html" rel="noopener noreferrer" class="link">LOGIN PAGE</a>
+        <marquee class="footerMarquee">
+            <p> © 2023 VANSH YELEKAR, AJINKYA SHELKE & JITESH UIKEY. All rights reserved.
+                Unauthorized use and/or duplication of this material without express and written permission from Owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Owner with appropriate and specific direction to the original content.
+            </p>
+        </marquee>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Cricket Database Management</title>
+</head>
+<body>
+    <div class="body-sec">
+        <h1>Cricket Database Management</h1>
+        <div id="loginOptions">
+            <button onclick='showLoginForm("user")'>Login as User</button>
+            <button onclick='showLoginForm("admin")'>Login as Admin</button>
+        </div>
+        <br><br>
+        <div id="loginForms">
+            <!-- User Login Form -->
+            <form id="userLoginForm" style="display: none;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required><br>
+                <label for="usermail">User Email:</label>
+                <input type="email" id="usermail" required><br>
+                <label for="userPassword">Password:</label>
+                <input type="password" id="userPassword" required><br>
+                <button type="button" onclick="userLogin()">Login</button>
+            </form>
+
+            <!-- Admin Login Form -->
+            <form id="adminLoginForm" style="display: none;">
+                <label for="adminId">Admin ID:</label>
+                <input type="text" id="adminId" required><br>
+                <label for="adminMail">Admin Email:</label>
+                <input type="email" id="adminMail" required><br>
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" required><br>
+                <button type="button" onclick="adminLogin()">Login</button>
+            </form>
+        </div>
+    </div>
+        
+    <script src="server.js"></script>
+</body>
+</html>
