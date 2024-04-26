@@ -28,8 +28,9 @@ db.connect((err) => {
 
 // User registration endpoint
 app.post('/api/register-user', (req, res) => {
+    // const username=req.body.username
     const { username, usermail, password } = req.body;
-
+ 
     // Check if the user already exists
     const checkUserSql = 'SELECT * FROM user_table WHERE user_name = ? OR user_id = ?';
 
@@ -196,6 +197,7 @@ app.get('/api/searchByTeam', (req, res) => {
     const team_id = req.query.teamId;
 
     const searchTeamSql = 'SELECT players.player_id,players.player_name,players.jersey_number,players.team_id,team.team_name,record.run_record,record.wicket_record,record.strike_rate,record.centuries_count,record.most_run_in_a_match,record.most_wicket_in_a_match,stats.role,stats.team_position,stats.batting_order FROM players JOIN team ON players.team_id = team.team_id JOIN stats ON players.player_id = stats.player_id JOIN record ON players.player_id = record.player_id WHERE team.team_id = ?';
+    
     const searchTeamInput = `${team_id}`;
 
     db.query(searchTeamSql, [searchTeamInput], (searchTeamErr, searchTeamResult) => {

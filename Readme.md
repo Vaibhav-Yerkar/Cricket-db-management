@@ -77,7 +77,7 @@
 
 1. To run the program run the server.js file which will initialise the express Js server.
 
-2. Then go to the browser and enter localhost:8081 to load the page.
+2. Then go to the browser and enter localhost:5500 to load the page.
 
 - On loading the first page to load is index.html that is a login page, that consist of two forms, one for user login (loads user.html) and another for admin login (loads admin.html).
     - user.html : It visually represent the sql data;
